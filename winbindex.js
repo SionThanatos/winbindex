@@ -848,7 +848,9 @@ var globalFunctions = {};
                     var windowsVersionInfo = windowsVersions[windowsVersion][update].windowsVersionInfo;
                     var baseDate = windowsVersionInfo.releaseDate;
                     itemText = baseDate + ' - Base ' + windowsVersion;
-                } else if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(update)) {
+                } else if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.test(update)) {
+                    // Note: The GUID can have a suffix, e.g.:
+                    // 58ddbb00-947e-420a-b296-a2451ae6ac0b_rev.2
                     var updateUupInfo = windowsVersions[windowsVersion][update].updateInfo;
                     var updateUupDate = new Date(updateUupInfo.created * 1000).toISOString().slice(0, '2000-01-01'.length);
                     itemText = updateUupDate + ' - ' + update.slice(0, 8);
