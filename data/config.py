@@ -84,10 +84,11 @@ file_hashes_unsigned_with_overlay = {
     '9eec7e5188d1a224325281e4d0e6e1d5f9f034f02bd1fadeb792d3612c72319e',  # libpdcurses.dll
     'f9b385e19b9d57a1d1831e744ed2d1c3bb8396d28f48d10120cecfe72595b222',  # libpdcursesu.dll
     '787d5c07ab0bb782dede7564840e86c468e3728e81266dae23eb8ad614bcee95',  # libpdcursesw.dll
-    '7a5f2a76e62ea79fcde42d50463a8497817031bbd8886b3d9c464dfef4fb966d',  # woftasks.dll
 }
 
-file_details_unsigned_with_overlay = []
+file_details_unsigned_with_overlay = [
+    {'k': 'original name', 'v': 'WofTasks.dll', 'overlay_size': 0x200},
+]
 
 # Details: https://gist.github.com/m417z/3248c18efd942f63013b8d3035e2dc79
 file_hashes_mismatch = {
